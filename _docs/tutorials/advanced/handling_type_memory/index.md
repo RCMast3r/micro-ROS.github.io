@@ -135,7 +135,7 @@ mypackage__msg__MyType mymsg;
 
 // Assigning dynamic memory to the frame_id char sequence
 mymsg.header.frame_id.capacity = 100;
-mymsg.header.frame_id.data = (char*) malloc(mymsg.values.capacity * sizeof(char));
+mymsg.header.frame_id.data = (char*) malloc(mymsg.header.frame_id.capacity * sizeof(char));
 mymsg.header.frame_id.size = 0;
 
 // Assigning value to the frame_id char sequence
